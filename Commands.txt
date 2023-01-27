@@ -1,0 +1,21 @@
+-Terminal commands
+python3 -m venv ./venv/
+. venv/bin/activate
+pip3 install uvicorn fastapi
+
+-Create app folder
+-CD into in
+-Make main.py
+
+-Code in main.py:
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+async def hello():
+    return "Hello World"
+
+
+-Start server
+uvicorn main:app --reload
